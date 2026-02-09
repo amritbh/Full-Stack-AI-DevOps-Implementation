@@ -63,6 +63,12 @@ resource "aws_instance" "demo_ec2" {
     }
 }
 
+output "ec2_public_ip" {
+  description = "Public IP of the EC2 instance"
+  value = aws_instance.demo_ec2.public_ip
+  # sensitive = true
+}
+
 # resource "aws_iam_user" "demo_user" {
 #   name = "terraform-demo-user"
 
