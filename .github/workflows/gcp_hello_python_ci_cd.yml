@@ -75,7 +75,7 @@ jobs:
 
           - name: Configure kubectl for GKE
             run: |
-              gcloud container clusters get-credentials ${{ secrets.GCP_CLUSTER_NAME }}
+              gcloud container clusters get-credentials ${{ secrets.GCP_CLUSTER_NAME }} \
                 --region ${{ secrets.GCP_REGION }}
       
           - name: Verify connection
