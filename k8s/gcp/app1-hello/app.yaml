@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app1-hello
-          image: dcode007/hello-spring:latest
+          image: dcode007/hello-node:latest
 
           resources:
             limits:
@@ -40,7 +40,7 @@ spec:
           #         name: hello-db-secret
           #         key: HELLO_DB_PASSWORD
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -52,4 +52,4 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 8080  
+      targetPort: 3000  
