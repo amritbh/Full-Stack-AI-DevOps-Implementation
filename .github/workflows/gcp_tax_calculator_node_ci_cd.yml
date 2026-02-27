@@ -1,4 +1,4 @@
-name: Tax Calculator Node CI/CD to AWS EKS
+name: Tax Calculator Node CI/CD to GCP GKE
 
 on:
   # push
